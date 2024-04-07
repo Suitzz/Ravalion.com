@@ -1,0 +1,2631 @@
+@font-face {
+  font-family: 'AndadaPro';
+  src: url('/fonts/AndadaPro-VariableFont_wght.ttf') format('truetype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000000;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: AndadaPro;
+}
+
+body {
+  justify-content: flex-start;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 125px;
+}
+
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75); /* Dark overlay */
+  display: flex; /* Make this flex by default */
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Make container visible */
+  visibility: visible; /* Show the container immediately */
+  backdrop-filter: blur(5px); /* Blur effect for the background */
+  z-index: 100; /* Ensure it is above other content */
+  flex-direction: column;
+}
+
+#popupCard{
+  width: 90%;
+}
+/* Show the pop-up container */
+#popup-container.show {
+  opacity: 1; /* Make container visible */
+  visibility: visible; /* Show the container */
+  z-index: 100;
+}
+
+/* Pop-up styling to match the card's style */
+#popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -55%;
+  width: 25%;
+}
+
+.popUpImg{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-top: 15%;
+  gap: 10px;
+}
+
+#popup img {
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+img:active {
+  /* Prevent any default browser styling from applying on touch */
+  position: relative; /* Keeps the element in its intended position */
+  margin-top: 0; /* Ensures no movement */
+}
+
+
+h2{
+  font-family: AndadaPro;
+  text-align: center;
+  font-size: 25px;
+  width: 200px;
+  margin-top: 35%;
+}
+
+/* Slide-in effect for the pop-up */
+#popup-container.show #popup {
+  transform: translateY(0px); /* Slide-in to final position */
+}
+
+/* Style for the close button */
+#close-popup {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: black; /* Close button color */
+  position: absolute;
+  top: 10px;
+  left: 120px;
+  cursor: pointer;
+  font-size: 25px; /* Adjust as needed */
+  transition: color 0.2s, transform 0.3s ease; /* Apply transition to color and transform */
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+/* End of the Pop-up */
+
+.image {
+  width: 70%;
+  height: auto;
+}
+
+.cardcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin-top: 10%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  position: relative;
+  margin: 20px 0;
+}
+
+
+/* Add this to your styles.css file */
+.container-clicked .card, .container-clicked .button {
+  animation: clickAnimation 0.3s ease;
+}
+
+/* Button Click Animation */
+.button-clicked {
+  animation: ClickAnimation 0.3s ease;
+}
+
+@keyframes buttonClickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9); /* Slightly smaller for a button press effect */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.patreon, .only {
+  max-width: 375px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.button-link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  width: 70%;
+  z-index: 10;
+}
+
+.button {
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+
+/* Click Animation */
+.click-animation {
+  animation: clickEffect 0.3s ease;
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95); /* Slightly smaller for a button press effect */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.jornalContainer{
+  width: 100%;
+  background-color: #f9e79f;
+  margin-top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.jornalRectangle{
+  background-color: #f9e79f;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jornalRectangle img{
+  margin-top: 15px;
+  width: 75%;
+}
+
+.jornalTitle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jornalTitle img{
+  margin-top: 15px;
+  width: 75%;
+}
+
+.jornalRectangle2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jornalRectangle2 img{
+  margin-top: 15px;
+  width: 75%;
+}
+
+.jornalSubtitle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subtitleJornal{
+  margin-top: 15px;
+  width: 75%;
+  height: auto;
+}
+
+.jornalImage-Text{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#videoFrame {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  top: 12px;
+  left: 35px;
+  z-index: 3;
+}
+
+#myVideo {
+  position: absolute;
+  width: 73%; /* Make the video fill the container horizontally */
+  height: 96%; /* Make the video fill the container vertically */
+  z-index: 2; /* Place the video above the image */
+  top: 1%;
+  left: 1.07%;
+}
+
+#imgBorder {
+  width: 75%; /* Adjust as needed */
+  height: 95%; /* Adjust as needed */
+  margin: 0; /* Remove any default margin */
+}
+
+.jornalImage-Text img{
+  margin-top: 20px;
+  width: 75%;
+}
+
+.journalImage-Text img:last-child {
+  margin-right: 0; /* Removes the margin from the last image */
+}
+
+.jornalText{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jornalText img{
+  width: 75%;
+}
+
+#textImage3 {
+  margin-bottom: 20px;
+}
+
+.patreonContinuation{
+  margin-top: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patreonContinuation img{
+  width: 80%;
+}
+
+.carousel-viewport{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: -50%;
+}
+
+ /* Ensure the swiper container (.container) is relative to position the gradients correctly */
+ .container {
+  position: relative;
+  width: 100%; /* Adjust based on your layout needs */
+  overflow: hidden; /* This might need to be adjusted based on your layout */
+  z-index: 10;
+  height: auto;
+}
+
+.container::before, .container::after {
+  content: '';
+  position: absolute;
+  height: 150px; /* Example height of the fade effect */
+  top: 50% ;
+  bottom: 0;
+  transform: translateY(-50%);
+  width: 50px; /* Width of the fade effect */
+  pointer-events: none;
+  z-index: 10;
+}
+
+.container::before {
+  left: -30px;
+  background: linear-gradient(to right, #000000 0%, transparent 100%);
+}
+
+.container::after {
+  right: -30px;
+  background: linear-gradient(to left, #000000 0%, transparent 100%);
+}
+
+
+/* Adjust the z-index of swiper navigation buttons if they exist */
+.swiper-button-next, .swiper-button-prev {
+  z-index: 10;
+}
+
+.section-heading {
+    font-size: 3rem;
+    color: var(--primary);
+    padding: 2rem 0;
+}
+
+#tranding {
+    padding: 4rem 0;
+    background: transparent;
+    margin-bottom: 5%;
+}
+
+.tranding-slider {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+}
+
+
+#tranding .tranding-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.tranding-slide {
+  /* Ensure there's enough space for the image */
+  min-height: 400px; /* Adjust based on the expected height of the images */
+}
+@keyframes scaleSlide {
+  from {
+    transform: scale(1); /* No início, o slide está com 100% do tamanho */
+  }
+  to {
+    transform: scale(0.75); /* No final, o slide está com 75% do tamanho */
+  }
+}
+
+
+.tranding-slide .tranding-slide-img {
+  /* Allow the container to fit the content */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 225px; /* Adjusted image width */
+  height: auto; /* Adjusted image height to maintain aspect ratio */
+  object-fit: cover;
+  background: transparent;
+}
+/* Targeting all slides */
+.tranding-slide .tranding-slide-img img {
+  transition: transform 0.5s ease; /* Smooth transition for scaling */
+}
+
+/* Assuming your central slide has a specific class when active; for example, '.swiper-slide-active' */
+.swiper-slide-active .tranding-slide-img img {
+  transform: scale(1); /* Keep the central image at normal size */
+}
+
+/* You can adjust this scale value as needed */
+.swiper-slide-next .tranding-slide-img img,
+.swiper-slide-prev .tranding-slide-img img {
+  transform: scale(0.8); /* Smaller scale for images on the sides */
+}
+
+.swiper-slide {
+  transition: transform 0.5s ease-out;
+}
+
+.tranding-slide-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--white);
+}
+
+.food-price, .tranding-slide-content-bottom {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.tranding-slide-content-bottom {
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.rating ion-icon {
+    color: var(--primary);
+}
+
+.swiper-slide-shadow-left, .swiper-slide-shadow-right,
+.swiper-slide::before, .swiper-slide::after {
+    display: none !important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Center content within the slide */
+    width:auto;
+    transition: transform 0.5s ease-out;
+}
+
+.onlyContinuation{
+  background-color: #f9e79f;
+  margin-top: -10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.onlyContinuation img{
+  width: 85%;
+  margin-top: 60%;
+  margin-bottom: 5%;
+}
+
+#tranding1{
+  margin-top: -1%;
+  background-color: #f9e79f;
+  height: 420px;
+}
+
+.container1{
+  margin-top: 40%;
+  height: 607px;
+  
+}
+
+.reviews{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 660px;
+}
+
+.reviewContainer{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+}
+
+.noticias{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -25%;
+  z-index: 1;
+}
+
+.noticia1{
+  width: 75%;
+  z-index: 1;
+  margin-top: -75%;
+}
+
+.noticia2{
+  width: 75%;
+  z-index: 1;
+  margin-top: 20%;
+}
+
+.textoNoticias{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 282px;
+  top: 50%;
+  right: 50%;
+  transform: translate(0% , 0%);
+}
+
+#textoReview{
+  width: 90%;
+}
+
+#faqs {
+  padding: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  background-color: #f9e79f;
+}
+
+.faqImage {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px; /* Adjusted for smaller screens */
+}
+
+.faqImage img {
+  width: 70%; /* Optimized for visibility on small screens */
+}
+
+.faq {
+  width: 75%; /* Full width to maximize space */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem; /* Reduced for space efficiency */
+  position: relative;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.0rem; /* Slightly reduced for space */
+  border-bottom: 3px solid #f1c40f;
+}
+
+.answer {
+  position: static;
+  top: auto;
+  left: 0;
+  width: 100%;
+  transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  background-color: #f9e79f;
+  padding: 0.5rem;
+  font-size: 0.8rem; /* Adjusted for readability */
+}
+
+.answer.show {
+  max-height: 500px; /* Adjusted for content visibility */
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 44%;
+  left: -5%;
+  transform: none;
+  background-color: #f9e79f;
+  width: calc(100% + 15px); /* Full width for ease of selection */
+  min-width: auto; /* Removes any minimum width requirement */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f1c40f;
+  border-radius: 5px;
+  padding: 0; /* Adjust padding inside the dropdown for compactness */
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 8px; /* Sufficient padding for touch targets */
+  text-decoration: none;
+  display: block;
+  font-size: 1.2rem; /* Size adjusted for the narrow screen */
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1c40f;
+}
+
+.availableOn{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 94%;  
+}
+
+.availableImg{
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -5%;
+}
+
+.available{
+  width: 90%;
+}
+
+.only{
+  width: 70%;
+  margin-top: 5%;
+}
+
+a{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.socialmedia{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+}
+
+.socialmedia img{
+  width: 20%;
+}
+
+/* Chat Icon Styles */
+#chatIconContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above other content */
+}
+
+#closeChat{
+  font-weight: bold;
+}
+
+#chatIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: scaleX(-1);
+}
+
+/* Chatbox Styles */
+#chatboxContainer {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  width: 240px;
+  background-color: #f9e79f;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  display: none; /* Initially hidden */
+  z-index: 10; /* Above the chat icon */
+}
+
+#chatHeader {
+  background-color: #f1c40f;
+  color: #000000;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chatHeader h2 {
+  margin: 0;
+  font-size: 16px;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(6%, -0%);
+}
+
+#closeChat {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+#chatMessages {
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 2px solid #f1c40f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Default alignment */
+}
+
+#chatInputContainer {
+  display: flex;
+  padding: 10px;
+  height: 35px;
+}
+
+#chatInput {
+  flex-grow: 1;
+  width: 140px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #f1c40f;
+  border-radius: 4px;
+  background-color: #f9e79f;
+}
+
+#sendMsg {
+  background-color: #f1c40f;
+  color: #000000;
+  border: none;
+  width: 70px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#sendMsg:hover {
+  background-color: #000000;
+  color: #f9e79f;
+}
+
+.user-message, .bot-message {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #000;
+  max-width: 65%;
+  width: 65%;
+  word-break: break-word;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+  position: relative;
+  background:#f9e79f;
+}
+
+.user-message {
+  align-self: flex-end;
+  border-top-right-radius: 0;
+  border: 2px solid #f1c40f;
+  background:#f9e79f;
+}
+
+.bot-message {
+  align-self: flex-start;
+  border-top-left-radius: 0;
+  background: #f1c40f;
+}
+
+@media screen and (min-width: 340px){
+
+header{
+  margin-top: 10%;
+}
+
+h2{
+  font-family: AndadaPro;
+  text-align: center;
+  font-size: 34px;
+  width: 275px;
+  margin-top: 35%;
+  
+}
+
+/* Style for the close button */
+#close-popup {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: black; /* Close button color */
+  position: absolute;
+  top: 15px;
+  left: 180px;
+  cursor: pointer;
+  font-size: 35px; /* Adjust as needed */
+  transition: color 0.2s, transform 0.3s ease; /* Apply transition to color and transform */
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+/* End of the Pop-up */
+  .imgContainer {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    top: 0%;
+    left: 0%;
+    transform: translate(12.5% , 3%);
+    z-index: 3;
+}
+
+  #videoFrame {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 3%);
+  }
+
+  #myVideo{
+    top: 0%;
+    left: 0%;
+    transform: translate(1.4%, -1.4%);
+    width: 301px;
+    height: 327px;
+  }
+
+  #imgBorder{
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, -2.5%);
+    width: 75%;
+  }
+
+  .tranding-slide {
+    min-height: 400px; /* Adjust based on the expected height of the images */
+  }
+  
+  .tranding-slide .tranding-slide-img {
+    /* Allow the container to fit the content */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .carousel-viewport{
+    margin-top: -30%;
+  }
+  
+  .tranding-slide .tranding-slide-img img {
+    width: 300px; /* Adjusted image width */
+    height: auto; /* Adjusted image height to maintain aspect ratio */
+    object-fit: cover;
+    background: transparent;
+  }
+  
+   /* Ensure the swiper container (.container) is relative to position the gradients correctly */
+ .container {
+  position: relative;
+  width: 100%; /* Adjust based on your layout needs */
+  overflow: hidden; /* This might need to be adjusted based on your layout */
+  z-index: 10;
+  height: auto;
+}
+
+.container::before, .container::after {
+  content: '';
+  position: absolute;
+  height: 200px; /* Example height of the fade effect */
+  top: 50% ;
+  bottom: 0;
+  transform: translateY(-50%);
+  width: 45px; /* Width of the fade effect */
+  pointer-events: none;
+  z-index: 10;
+}
+
+.container::before {
+  left: -20px;
+  background: linear-gradient(to right, #000000 0%, transparent 100%);
+}
+
+.container::after {
+  right: -20px;
+  background: linear-gradient(to left, #000000 0%, transparent 100%);
+}
+
+  .patreonContinuation{
+    margin-top: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .patreonContinuation img{
+    width: 80%;
+  }
+
+  .onlyContinuation{
+    background-color: #f9e79f;
+    margin-top: 26%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .onlyContinuation img{
+    width: 85%;
+    margin-top: 61%;
+    z-index: 1;
+  }
+
+  #tranding1{
+    margin-top: -20%;
+    background-color: #f9e79f;
+    height: 640px;
+  }
+
+  .container1 {
+    position: relative;
+    width: 100%; /* Adjust based on your layout needs */
+    overflow: hidden; /* This might need to be adjusted based on your layout */
+    z-index: 10;
+    height: auto;
+  }
+  
+  .container1::before, .container1::after {
+    content: '';
+  position: absolute;
+  height: 200px; /* Example height of the fade effect */
+  top: 50% ;
+  bottom: 0;
+  transform: translateY(-50%);
+  width: 45px; /* Width of the fade effect */
+  pointer-events: none;
+  z-index: 10;
+  }
+  
+  .container1::before {
+    left: -20px;
+    background: linear-gradient(to right, #f9e79f 0%, transparent 100%);
+  }
+  
+  .container1::after {
+    right: -20px;
+    background: linear-gradient(to left, #f9e79f 0%, transparent 100%);
+  }
+
+  .reviews{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 920px;
+  }
+
+  .question h3 {
+    font-size: 30px
+  }
+
+  .answer p{
+    font-size: 26px;
+  }
+
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem; /* Slightly reduced for space */
+  }
+  
+  .answer {
+    position: static;
+    top: auto;
+    left: 0;
+    width: 100%;
+    transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0.5rem;
+    font-size: 1rem; /* Adjusted for readability */
+  }
+  
+  .answer.show {
+    max-height: 500px; /* Adjusted for content visibility */
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    transform: none;
+    background-color: #f9e79f;
+    width: 75%; /* Full width for ease of selection */
+    min-width: auto; /* Removes any minimum width requirement */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #f1c40f;
+    border-radius: 5px;
+    padding: 0; /* Adjust padding inside the dropdown for compactness */
+  }
+  
+  .dropdown-menu a {
+    color: black;
+    padding: 8px; /* Sufficient padding for touch targets */
+    text-decoration: none;
+    display: block;
+    font-size: 24px; /* Size adjusted for the narrow screen */
+    border-bottom: 2px solid #f1c40f;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f1c40f;
+  }
+
+  #chatIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .chatImg{
+    width: 40px;
+    height: 40px;
+  }
+  /* Chatbox Styles */
+#chatboxContainer {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  width: 375px;
+  height: 460px;
+  background-color: #f9e79f;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  display: none; /* Initially hidden */
+  z-index: 10; /* Above the chat icon */
+}
+
+#chatHeader {
+  background-color: #f1c40f;
+  color: #000000;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chatHeader h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+#closeChat {
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, 0%);
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+#chatMessages {
+  height: 310px;
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 2px solid #f1c40f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Default alignment */
+}
+
+#chatInputContainer {
+  display: flex;
+  padding: 10px;
+  height: 40px;
+}
+
+#chatInput {
+  flex-grow: 1;
+  width: 140px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #f1c40f;
+  border-radius: 4px;
+  background-color: #f9e79f;
+  font-size: 18px;
+}
+
+#chatInput:focus {
+  outline: none;
+}
+
+#sendMsg {
+  background-color: #f1c40f;
+  color: #000000;
+  border: none;
+  width: 70px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+#sendMsg:hover {
+  background-color: #000000;
+  color: #f9e79f;
+}
+
+.user-message, .bot-message {
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #000;
+  max-width: 65%;
+  width: 65%;
+  word-break: break-word;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.1;
+  position: relative;
+  background:#f9e79f;
+}
+
+.user-message {
+  align-self: flex-end;
+  border-top-right-radius: 0;
+  border: 2px solid #f1c40f;
+  background:#f9e79f;
+}
+
+.bot-message {
+  align-self: flex-start;
+  border-top-left-radius: 0;
+  background: #f1c40f;
+}
+}
+
+@media screen and (min-width: 728px) {
+
+  h2{
+    font-family: AndadaPro;
+    text-align: center;
+    font-size: 55px;
+    width: 475px;
+    margin-top: 35%;
+  }
+  
+  /* Style for the close button */
+  #close-popup {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black; /* Close button color */
+    position: absolute;
+    top: 25px;
+    left: 360px;
+    cursor: pointer;
+    font-size: 55px; /* Adjust as needed */
+    transition: color 0.2s, transform 0.3s ease; /* Apply transition to color and transform */
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  #videoFrame {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  #videoFrame .imgContainer video {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 73%;
+    height: 95%;
+    object-fit: cover;
+    transform: translate(-50%, -50%); /* Center the video within the container */
+  }
+
+  header {
+    height: 200px;
+  }
+
+  .image {
+    margin-top: 10%;
+    width: 70%;
+  }
+
+  .cardcontainer{
+    margin-top: 20%;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0;
+  }
+
+  .jornalContainer{
+    width: 100%;
+    background-color: #f9e79f;
+    margin-top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .jornalRectangle{
+    background-color: #f9e79f;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .jornalRectangle img{
+    margin-top: 15px;
+    width: 75%;
+  }
+  
+  .jornalTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .jornalTitle img{
+    margin-top: 15px;
+    width: 75%;
+  }
+  
+  .jornalRectangle2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #cabeçaJornal{
+    margin-top: 15px;
+    width: 75%;
+  }
+  
+
+  .jornalImage-Text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .jornalImage-Text img{
+    margin-top: 15px;
+    width: 75%;
+  }
+  
+  .journalImage-Text img:last-child {
+    margin-right: 0; /* Removes the margin from the last image */
+  }
+  
+  .jornalText{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .jornalText img{
+    width: 75%;
+    margin-top: 15px;
+  }
+
+  .jornalText img:first-child{
+    width: 75%;
+    margin-top: 15px;
+  }
+  
+  .jornalText img:nth-child(2) {
+    margin-top: 35px;
+  }
+  
+  .jornalText img:nth-child(3) {
+    margin-top: 35px;
+  }
+
+  .carousel-viewport{
+    margin-top: -10%;
+  }
+
+  .tranding-slide {
+    min-height: 400px; /* Adjust based on the expected height of the images */
+  }
+  
+  .tranding-slide .tranding-slide-img {
+    /* Allow the container to fit the content */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .tranding-slide .tranding-slide-img img {
+    width: 450px; /* Adjusted image width */
+    height: auto; /* Adjusted image height to maintain aspect ratio */
+    object-fit: cover;
+    background: transparent;
+  }
+
+  .container::before, .container::after {
+    content: '';
+    position: absolute;
+    height: 300px; /* Example height of the fade effect */
+    top: 50% ;
+    bottom: 0;
+    transform: translateY(-50%);
+    width: 100px; /* Width of the fade effect */
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .patreonContinuation{
+    margin-top: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .patreonContinuation img{
+    width: 80%;
+  }
+
+
+  .onlyContinuation{
+    background-color: #f9e79f;
+    margin-top: 13%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .onlyContinuation img{
+    width: 85%;
+    margin-top: 30%;
+    margin-bottom: 5%;
+  }
+  
+  #tranding1{
+    margin-top: -5%;
+    background-color: #f9e79f;
+    height: 640px;
+  }
+  
+  .container1{
+    margin-top: 20%;
+    height: 447px; 
+
+  }
+
+  .reviews{
+    height: 1050px;
+  }
+  
+  .noticias{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .noticia1{
+    width: 60%;
+    z-index: 100;
+    margin-top: -60%;
+  }
+  
+  .noticia2{
+    width: 60%;
+    z-index: 1;
+    margin-top: 5%;
+  }
+  
+  .textoNoticias{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30%;
+  }
+  
+  #faqs {
+    padding: 45%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    background-color: #f9e79f;
+  }
+  
+  .faqImage {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Adjusted for smaller screens */
+  }
+  
+  .faqImage img {
+    width: 60%; /* Optimized for visibility on small screens */
+  }
+  
+  .faq {
+    width: 100%; /* Full width to maximize space */
+    margin-top: 1rem;
+    margin-bottom: 1.5rem; /* Reduced for space efficiency */
+    position: relative;
+  }
+  
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .question h3{
+    font-size: 50px;
+  }
+  
+  .answer {
+    position: static;
+    top: auto;
+    left: 0;
+    width: 100%;
+    transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0.5rem;
+  }
+
+  .answer p{
+    font-size: 35px;
+  }
+  
+  .answer.show {
+    max-height: 500px; /* Adjusted for content visibility */
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    transform: none;
+    background-color: #f9e79f;
+    width: 50%; /* Full width for ease of selection */
+    min-width: auto; /* Removes any minimum width requirement */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #f1c40f;
+    border-radius: 5px;
+    padding: 0; /* Adjust padding inside the dropdown for compactness */
+  }
+  
+  .dropdown-menu a {
+    color: black;
+    padding: 15px; /* Sufficient padding for touch targets */
+    text-decoration: none;
+    display: block;
+    font-size: 1.9rem; /* Size adjusted for the narrow screen */
+
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f1c40f;
+  }
+
+  #chatIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .chatImg{
+    width: 50px;
+    height: 50px;
+  }
+
+  #chatboxContainer {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    width: 450px;
+    height: 500px;
+    background-color: #f9e79f;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    display: none; /* Initially hidden */
+    z-index: 10; /* Above the chat icon */
+  }
+  
+  #chatHeader {
+    background-color: #f1c40f;
+    color: #000000;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #chatHeader h2 {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(5%, 0%);
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  #closeChat {
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 45px;
+  }
+  
+  #chatMessages {
+    height: 320px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 2px solid #f1c40f;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Default alignment */
+  }
+  
+  #chatInputContainer {
+    display: flex;
+    padding: 10px;
+    height: 60px;
+  }
+  
+  #chatInput {
+    flex-grow: 1;
+    width: 140px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #f1c40f;
+    border-radius: 4px;
+    background-color: #f9e79f;
+    font-size: 24px;
+  }
+  
+  #chatInput:focus {
+    outline: none;
+  }
+  
+  #sendMsg {
+    background-color: #f1c40f;
+    color: #000000;
+    border: none;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+  }
+  
+  #sendMsg:hover {
+    background-color: #000000;
+    color: #f9e79f;
+  }
+  
+  .user-message, .bot-message {
+    margin-bottom: 15px;
+    padding: 20px 35px;
+    border-radius: 10px;
+    color: #000;
+    max-width: 65%;
+    width: 65%;
+    word-break: break-word;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1;
+    position: relative;
+    background:#f9e79f;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+    border-top-right-radius: 0;
+    border: 2px solid #f1c40f;
+    background:#f9e79f;
+  }
+  
+  .bot-message {
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    background: #f1c40f;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  #popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensure it is above other content */
+    background: rgba(0, 0, 0, 0.75); /* Dark overlay */
+    backdrop-filter: blur(5px); /* Blur effect for the background */
+}
+
+#popupCard {
+    width: 30%;
+    position: relative; /* Ensure position is relative for absolute positioning */
+    text-align: center; /* Center text inside popup card */
+}
+
+  /* Show the pop-up container */
+  #popup-container.show {
+    opacity: 1; /* Make container visible */
+    visibility: visible; /* Show the container */
+    z-index: 100;  
+  }
+  
+  #popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 115%; /* Center vertically */
+    left: 35%; /* Center horizontally */
+    transform: translate(-0%, -50%); /* Center the popup */
+    width: 30%; /* Adjust width as needed */
+}
+
+.popUpImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%; /* Adjust width as needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 150%);
+}
+  
+#popup img {
+  width: 50%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+  h2 {
+    font-family: AndadaPro;
+    font-size: 34px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 300%);
+}
+  
+  /* Slide-in effect for the pop-up */
+  #popup-container.show #popup {
+    transform: translateY(0px); /* Slide-in to final position */
+  }
+  
+  /* Style for the close button */
+  #close-popup {
+    color: black; /* Close button color */
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(200%, 375%);
+    cursor: pointer;
+    font-size:34px; /* Adjust as needed */
+    transition: color 0.2s, transform 0.3s ease; /* Apply transition to color and transform */
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  .image{
+        width:40%;
+        margin-top: 5%;
+    }
+
+    .button-link {
+      position: absolute;
+      bottom: 12%; /* Decreased from 20% to move the button 5% down */
+      left: 50%;
+      transform: translateX(-50%);
+      text-decoration: none;
+      width: 70%;
+      z-index: 10;
+    }
+
+    .button:hover{
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .cardcontainer {
+      display: flex;
+      flex-wrap: wrap; /* Allows items to wrap to the next line */
+      justify-content: center;
+      gap: 75px;
+      margin-top:-10%;
+  }
+  
+
+    .card-container {
+      overflow: hidden; /* This ensures anything outside the container is not shown */
+      position: relative; /* Needed for proper positioning of the absolute elements inside */
+      width: 350px; /* Set the width to match your image */
+      height: 250px; /* Set the height to match your image */
+      border-radius: 30px;
+      transition: transform 0.3s ease;
+      margin-top: 20%;
+    }
+    
+    .card-container img {
+      width: 100%; /* This will make your image fill the container's width */
+      height: auto; /* This will maintain the aspect ratio of the image */
+      display: block; /* This removes any extra space beneath the image */
+    }
+    
+    
+    #mouse-glow {
+      pointer-events: none;
+      position: fixed; /* Use fixed to ensure it follows the mouse globally */
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      transition: opacity 0.3s, transform 0.3s; /* Smooth transition for moving and showing/hiding */
+      opacity: 0; /* Initially hidden */
+      z-index: 10; /* Ensure it's above other elements */
+  }
+  .blue-glow {
+      background: radial-gradient(circle closest-side, rgba(183, 149, 11, 0.7) 5%, transparent);
+  }
+  .purple-glow {
+      background: radial-gradient(circle closest-side, rgba(183, 149, 11, 0.7) 5%, transparent);
+  }
+  
+  .click-animation {
+    animation: clickEffect 300ms ease;
+}
+
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+#popup-container.show #popup {
+  transform: translateY(0px); /* Slide-in to final position */
+}
+
+.popUpImg{
+  gap: 10px;
+}
+
+#popup img {
+  transition: transform 0.2s ease-in-out;
+}
+
+#popup img:hover {
+  transform: scale(1.1); /* Adjust the scale value to your preference */
+  cursor: pointer;
+}
+
+.jornalContainer{
+  width: 118%;
+  background-color: #f9e79f;
+  margin-top: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 1140px;
+}
+
+.jornalRectangle{
+  background-color: #f9e79f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jornalRectangle img{
+  margin-top: 50px;
+  width: 50%;
+}
+
+.jornalTitle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jornalTitle img{
+  margin-top: 25px;
+  width: 50%;
+}
+
+.jornalRectangle2{
+  width: 67%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cabeçaJornal{
+  margin-top: 25px;
+  width: 75%;
+}
+
+.jornalSubtitle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subtitleJornal{
+  margin-top: 25px;
+  width: 50%;
+}
+
+.jornalImage-Text{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  gap: 50px;
+}
+
+#videoFrame {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height: 100%;
+}
+
+.imgContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; /* Set a higher z-index */
+}
+
+#myVideo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50.2%,-50%);
+  position: absolute;
+  width: 97%; /* Make the video fill the container horizontally */
+  height: 98%; /* Make the video fill the container vertically */
+  z-index: 2;
+}
+
+#imgBorder{
+  top: 50%;
+  left: 50%;
+  transform: translate(0%,0%);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1c40f;
+}
+
+#firstTextBox {
+  width: 15%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%,0%);
+}
+
+#secondTextBox {
+  width: 15%;
+  height: 100%;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%,0%);
+}
+
+.jornalText {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  width: 100%;
+  gap: 50px;
+  margin-top: 1%;
+}
+
+#textImage1{
+  width: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%,0%);
+}
+
+#textImage2{
+  width: 15%;
+  margin-bottom: 0;
+  margin-top: 14px;
+}
+
+#textImage3 {
+  margin-bottom: 0;
+  margin-top: 14px;
+  width: 15%;
+}
+/* This styles the scrollbar track */
+::-webkit-scrollbar {
+  width: 16px; /* Adjust the width of the scrollbar */
+}
+
+/* This styles the draggable thumb */
+::-webkit-scrollbar-thumb {
+  background: #f1c40f; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+/* This styles the track (background) */
+::-webkit-scrollbar-track {
+  background: #f9e79f; /* Color of the track */
+}
+
+.patreonContinuation{
+  margin-top: -8%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patreonContinuation img{
+  width: 40%;
+}
+
+#tranding{
+  margin-top: -9%;
+}
+
+.tranding-slide {
+  /* Ensure there's enough space for the image */
+  min-height: 400px; /* Adjust based on the expected height of the images */
+}
+
+.tranding-slide .tranding-slide-img {
+  /* Allow the container to fit the content */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 450px; /* Adjusted image width */
+  height: auto; /* Adjusted image height to maintain aspect ratio */
+  object-fit: cover;
+  background: transparent;
+  
+}
+
+/* Ensure the swiper container (.container) is relative to position the gradients correctly */
+.container {
+  position: relative;
+  width: 58%; /* Adjust based on your layout needs */
+  overflow: hidden; /* This might need to be adjusted based on your layout */
+  z-index: 10;
+  height: auto;
+}
+
+.container::before, .container::after {
+  content: '';
+  position: absolute;
+  height: 400px; /* Example height of the fade effect */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px; /* Width of the fade effect */
+  pointer-events: none;
+  z-index: 10;
+}
+
+.container::before {
+  left: 0;
+  background: linear-gradient(to right, #000000 0%, transparent 100%);
+}
+
+.container::after {
+  right: 0;
+  background: linear-gradient(to left, #000000 0%, transparent 100%);
+}
+
+.carousel-viewport{
+  margin-top: -2%;
+}
+
+#tranding1{
+  margin-top: -20%;
+  background-color: #f9e79f;
+  height: 500px;
+}
+
+.onlyContinuation{
+  background-color: #f9e79f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.onlyContinuation img{
+  width: 45%;
+  margin-top: -13%;
+  margin-bottom: 5%;
+}
+
+/* Ensure the swiper container (.container) is relative to position the gradients correctly */
+.container1 {
+  position: relative;
+  width: 56%; /* Adjust based on your layout needs */
+  overflow: hidden; /* This might need to be adjusted based on your layout */
+  z-index: 10;
+  height: auto;
+  margin-top: 5%;
+}
+
+.container1::before, .container1::after {
+  content: '';
+  position: absolute;
+  height: 400px; /* Example height of the fade effect */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px; /* Width of the fade effect */
+  pointer-events: none;
+  z-index: 10;
+}
+
+.container1::before {
+  left: 0;
+  background: linear-gradient(to right, #f9e79f 0%, transparent 100%);
+}
+
+.container1::after {
+  right: 0;
+  background: linear-gradient(to left, #f9e79f 0%, transparent 100%);
+}
+
+.swiper-slide-next .tranding-slide-img img,
+.swiper-slide-prev .tranding-slide-img img {
+  transform: scale(0.75); /* Smaller scale for images on the sides */
+}
+
+
+
+.patreonContinuation, .onlyContinuation {
+  width: 100%; /* Ensure full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* Set a minimum height or specific height as needed */
+  min-height: 550px; /* Example min-height, adjust as necessary */
+}
+
+.patreonContinuation img, .onlyContinuation img {
+  max-width: 100%; /* Ensure the image does not exceed the container's width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#tranding {
+  margin-bottom: 0%; /* Reduce the bottom margin to pull the next section closer */
+}
+
+#onlyContinuation {
+  margin-top: -5%; /* Alternatively, or in addition, reduce the top margin of the #onlyContinuation section */
+}
+
+
+.reviews{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+}
+
+.reviewContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.noticias{
+  margin-left: 5%;
+  width: 60%;
+  margin-top: -3%;
+}
+
+.noticias img{
+  width: 50%;
+}
+
+.noticias img:nth-child(1) {
+  margin-left: -10%;
+  margin-bottom: 12%;
+  z-index: 1; /* Ensure this image is on top */
+}
+
+.noticias img:nth-child(2) {
+  margin-left: -21%;
+  margin-top: -62%;
+  z-index: 2;
+}
+
+.textoNoticias{
+  width: 50%;
+  margin-left: 10%;
+  margin-top: 25%;
+}
+
+#faqs {
+  padding: 19%;
+  width: 100%;
+  background-color: #f9e79f;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.faqImage {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px; /* Adjusted for consistency */
+  margin-top: -10%;
+}
+
+.faqImage img {
+  width: 20%; /* Unchanged, keeping the image size the same */
+}
+
+.faq {
+  width: 50%;
+  margin-top: 2rem;
+  position: relative; /* Ensures .answer is positioned absolutely within */
+  margin-bottom: 4rem; /* Provides space for the absolute .answer */
+  
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem; /* Unchanged, keeping the font size the same */
+  cursor: pointer;
+  height: 90px;
+  border-bottom: 3px solid #f1c40f;
+}
+
+.question h3{
+  font-size: 34px;
+  width: 90%;
+}
+
+.answer {
+  position: absolute;
+  top: 50%; /* Position the answer just below the question */
+  left: 50%;
+  transform: translate(-50%,10%);
+  width: 100%; /* Ensure the answer spans the width of the .faq container */
+  transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  max-height: 0; /* Start collapsed */
+  opacity: 0;
+  visibility: hidden; /* Start hidden */
+  overflow: hidden;
+  background-color: transparent; /* Match the FAQ background or adjust as needed */
+  padding: 1rem; /* Padding for the answer text, adjust as needed */
+  cursor: pointer;
+}
+
+.answer.show {
+  max-height: 1000px; /* Maximum height for expanding, adjust based on content */
+  opacity: 1;
+  visibility: visible; /* Make visible */
+}
+
+.answer p {
+  font-size: 20px; /* Unchanged, keeping the font size the same */
+  line-height: 1.6; /* Unchanged, keeping the line height the same */
+}
+
+/* Adjusting dropdown menu position and size for a smaller layout */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positioned relative to its positioned ancestor */
+  top: 245%; /* Adjust if necessary to fit the layout */
+  left: -2%; /* Adjust if necessary to align properly */
+  transform: translateY(-50%); /* Center it vertically relative to the burger icon */
+  background-color: #f9e79f;
+  width: calc(100% + 30px);
+  max-height: 269px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f1c40f;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdown-menu a {
+  color: black;
+  width: 97%;
+  text-align: start;
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1c40f;
+}
+
+/* Style the scrollbar track (container) */
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #f1c40f; /* Track color */
+  /* Center the track */
+  display: flex;
+  align-items: center;
+}
+
+/* Style the scrollbar itself */
+.dropdown-menu::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+}
+
+/* Style the scrollbar thumb (the part that's draggable) */
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #f9e79f; /* Thumb color */
+  border-radius: 6px;
+  /* Center the thumb */
+  display: block;
+  margin: auto;
+}
+
+.availableOn{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.availableImg{
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.available{
+  width: 50%;
+}
+
+.only{
+  width: 70%;
+  margin-top: 5%;
+}
+
+.socialmedia{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+
+a{
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.socialmedia img{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#chatIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.chatImg{
+  width: 40px;
+  height: 40px;
+}
+
+#chatboxContainer {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  width: 350px;
+  height: 350px;
+  background-color: #f9e79f;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  display: none; /* Initially hidden */
+  z-index: 10; /* Above the chat icon */
+}
+
+#chatHeader {
+  background-color: #f1c40f;
+  color: #000000;
+  padding: 2px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chatHeader h2 {
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(5%, 0%);
+  text-align: center;
+  font-size: 22px;
+}
+
+#closeChat {
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, 0%);
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+#chatMessages {
+  height: 230px;
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 2px solid #f1c40f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Default alignment */
+}
+
+#chatInputContainer {
+  display: flex;
+  padding: 10px;
+  height: 40px;
+}
+
+#chatInput {
+  flex-grow: 1;
+  width: 140px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #f1c40f;
+  border-radius: 4px;
+  background-color: #f9e79f;
+  font-size: 16px;
+}
+
+#chatInput:focus {
+  outline: none;
+}
+
+#sendMsg {
+  background-color: #f1c40f;
+  color: #000000;
+  border: none;
+  width: 70px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+}
+
+#sendMsg:hover {
+  background-color: #000000;
+  color: #f1c40f;
+}
+
+.user-message, .bot-message {
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #000;
+  max-width: 65%;
+  width: 65%;
+  word-break: break-word;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
+  position: relative;
+  background:#f9e79f;
+}
+
+.user-message {
+  align-self: flex-end;
+  border-top-right-radius: 0;
+  border: 2px solid #f1c40f;
+  background:#f9e79f;
+}
+
+.bot-message {
+  align-self: flex-start;
+  border-top-left-radius: 0;
+  background: #f1c40f;
+}
+}

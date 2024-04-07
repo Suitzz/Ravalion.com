@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravalion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assets/img/Ravalion Icon.png" width:16px; height:16px;>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <div id="popup-container">
+        <img src="/assets/img/PopUp Card.png" id="popupCard">
+        <div id="popup">
+            <div id="close-popup-container">
+                    <button id="close-popup" onclick="closePopup()">&times;</button>
+            </div>
+              
+            <h2 id="select-language">Select Language</h2>
+            <div class="popUpImg">
+                <img src="assets/img/USA Flag Button.png" id="en-flag" style="cursor: pointer;" alt="EN">
+                <img src="assets/img/Portugal Flag Button.png" id="pt-flag" style="cursor: pointer;   " alt="PT">
+                <img src="assets/img/Spain Flag Button.png" id="es-flag" style="cursor: pointer;  " alt="ES">
+
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <img src="assets/img/Ravalion Logo.png" alt="Sapienz" class="image">
+    </header>
+    
+    <div class="cardcontainer">
+        <div class="card-container patreon" >
+            <img id="patreonCard" class="card" src="assets/img/EN/Cards Patreon/Ravalion 1st Page Patreon Card EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion 1st Page Patreon Card EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion 1st Page Patreon Card PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion 1st Page Patreon Card ES.png"
+                            data-href="#patreonContinuation">
+            <a href="https://www.patreon.com/ravalion" target="_blank" class="button-link">
+                <img id="Button" class="button" src="assets/img/EN/Cards Patreon/Button Patreon Ravalion EN.png"
+                            data-en="assets/img/EN/Cards Patreon/Button Patreon Ravalion EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Button Patreon Ravalion PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Button Patreon Ravalion ES.png">
+            </a>
+        </div>
+        <div class="card-container patreon" data-href="#onlyContinuation">
+            <img id="patreonCard" class="card" src="assets/img/EN/Cards Only/Ravalion 1st Page Only Card EN.png" 
+                            data-en="assets/img/EN/Cards Only/Ravalion 1st Page Only Card EN.png"
+                            data-pt="assets/img/PT/Cards Only/Ravalion 1st Page Only Card PT.png"
+                            data-es="assets/img/ES/Cards Only/Ravalion 1st Page Only Card ES.png">
+            <a href="https://onlyfans.com/grow_on_only" target="_blank" class="button-link">
+                <img id="Button" class="button" src="assets/img/EN/Cards Only/Button Onlyfans Ravalion EN.png"
+                            data-en="assets/img/EN/Cards Only/Button Onlyfans Ravalion EN.png"
+                            data-pt="assets/img/PT/Cards Only/Button Onlyfans Ravalion PT.png"
+                            data-es="assets/img/ES/Cards Only/Button Onlyfans Ravalion ES.png">
+            </a>
+        </div>
+    </div>
+    <!-- Glow effect container -->
+    <div id="mouse-glow"></div>
+
+    <div class="jornalContainer">
+        <div class="jornalRectangle">
+            <img src="assets/img/Rectangle 1 Jornal.png" alt="">
+        </div>
+        <div class="jornalTitle">
+            <img src="assets/img/Main Title Jornal.png" alt="">
+        </div>
+        <div class="jornalRectangle2">
+            <img src="assets/img/EN/Rectangle Border 1 EN.png" 
+                    data-en="assets/img/EN/Rectangle Border 1 EN.png"
+                    data-pt="assets/img/PT/Rectangle Border 1 PT.png"
+                    data-es="assets/img/ES/Rectangle Border 1 ES.png"
+                    id="cabeçaJornal">
+        </div>
+        <div class="jornalSubtitle">
+            <img src="assets/img/EN/Subtitle Jornal EN.png" 
+                    data-en="assets/img/EN/Subtitle Jornal EN.png"
+                    data-pt="assets/img/PT/Subtitle Jornal PT.png"
+                    data-es="assets/img/ES/Subtitle Jornal ES.png" 
+                    id="subtitleJornal">
+        </div>
+        <div class="jornalImage-Text">
+
+            <div id="videoFrame">
+                <div class="imgContainer">
+                    <img src="assets/img/Picture Border.png" id="imgBorder" alt="">
+                    <iframe id="myVideo" width="249" height="287" src="https://www.youtube.com/embed/3-boFPNCcHE?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <img src="assets/img/EN/1st Text Box EN.png"
+                    data-en="assets/img/EN/1st Text Box EN.png"
+                    data-pt="assets/img/PT/1st Text Box PT.png"
+                    data-es="assets/img/ES/1st Text Box ES.png"
+                    id="firstTextBox" class="text">
+            <img src="assets/img/EN/2nd Text Box EN.png"
+                    data-en="assets/img/EN/2nd Text Box EN.png"
+                    data-pt="assets/img/PT/2nd Text Box PT.png"
+                    data-es="assets/img/ES/2nd Text Box ES.png"
+                    id="secondTextBox" class="text">
+        </div>        
+        <div class="jornalText">
+            <img src="assets/img/EN/3rd Text Box EN.png"
+                    data-en="assets/img/EN/3rd Text Box EN.png"
+                    data-pt="assets/img/PT/3rd Text Box PT.png"
+                    data-es="assets/img/ES/3rd Text Box ES.png"
+                    id="textImage1" class="text">
+            <img src="assets/img/EN/4th Text Box EN.png"
+                    data-en="assets/img/EN/4th Text Box EN.png"
+                    data-pt="assets/img/PT/4th Text Box PT.png"
+                    data-es="assets/img/ES/4th Text Box ES.png"
+                    id="textImage2" class="text">
+            <img src="assets/img/EN/5th Text Box EN.png"
+                    data-en="assets/img/EN/5th Text Box EN.png"
+                    data-pt="assets/img/PT/5th Text Box PT.png"
+                    data-es="assets/img/ES/5th Text Box ES.png"
+                    id="textImage3" class="text">
+        </div>
+    </div>
+
+    <div class="patreonContinuation" id="patreonContinuation">
+        <img src="assets/img/EN/Ravalion ICUR EN.png"
+                    data-en="assets/img/EN/Ravalion ICUR EN.png"
+                    data-pt="assets/img/PT/Ravalion ICUR PT.png"
+                    data-es="assets/img/ES/Ravalion ICUR ES.png"
+                    id="icur">
+    </div>
+
+<section id="tranding">
+    <div class="carousel-viewport">
+        <div class="container">
+            <div class="swiper tranding-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="assets/img/EN/Cards Patreon/Ravalion Patreon Conexao EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion Patreon Conexao EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion Patreon Conexao PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion Patreon Conexao ES.png" 
+                            id="Patreon1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="assets/img/EN/Cards Patreon/Ravalion Patreon Analisa EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion Patreon Analisa EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion Patreon Analisa PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion Patreon Analisa ES.png" 
+                            id="Patreon2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="assets/img/EN/Cards Patreon/Ravalion Patreon Earnings EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion Patreon Earnings EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion Patreon Earnings PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion Patreon Earnings ES.png"
+                            id="Patreon3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="assets/img/EN/Cards Patreon/Ravalion Patreon Livestreams EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion Patreon Livestreams EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion Patreon Livestreams PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion Patreon Livestreams ES.png"
+                            id="Patreon4">
+                        </div>
+                    </div>
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="assets/img/EN/Cards Patreon/Ravalion Patreon Noticias EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion Patreon Noticias EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion Patreon Noticias PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion Patreon Noticias ES.png"
+                            id="Patreon5">
+                        </div>
+                    </div>
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="assets/img/EN/Cards Patreon/Ravalion Patreon Portfolio EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion Patreon Portfolio EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion Patreon Portfolio PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion Patreon Portfolio ES.png"
+                             id="Patreon6">
+                        </div>
+                    </div>
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="assets/img/EN/Cards Patreon/Ravalion Patreon Psicologia EN.png" 
+                            data-en="assets/img/EN/Cards Patreon/Ravalion Patreon Psicologia EN.png"
+                            data-pt="assets/img/PT/Cards Patreon/Ravalion Patreon Psicologia PT.png"
+                            data-es="assets/img/ES/Cards Patreon/Ravalion Patreon Psicologia ES.png"
+                            id="Patreon7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="onlyContinuation" id="onlyContinuation">
+        <img src="assets/img/EN/Ravalion EYSM EN.png"
+                    data-en="assets/img/EN/Ravalion EYSM EN.png"
+                    data-pt="assets/img/PT/Ravalion EYSM PT.png"
+                    data-es="assets/img/ES/Ravalion EYSM ES.png"
+                    id="tituloEYSM">
+    </div>
+
+    <section id="tranding1">
+        <div class="carousel-viewport">
+            <div class="container1">
+                <div class="swiper tranding-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Analisa outras redes sociais EN.png"
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Analisa outras redes sociais EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Analisa outras redes sociais PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Analisa outras redes sociais ES.png"
+                                        id="only1">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Aprender EN.png"
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Aprender EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Aprender PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Aprender ES.png"
+                                        id="only2">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Card Analise as tuas redes sociais EN.png"
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Card Analise as tuas redes sociais EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Card Analise as tuas redes sociais PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Card Analise as tuas redes sociais ES.png"
+                                        id="only3">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Conexoes EN.png"
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Conexoes EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Conexoes PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Conexoes ES.png"
+                                        id="only4">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Conhece EN.png"
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Conhece EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Conhece PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Conhece ES.png"
+                                        id="only5">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Construir EN.png"
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Construir EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Construir PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Construir ES.png"
+                                        id="only6">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Convidados EN.png"
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Convidados EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Convidados PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Convidados ES.png"
+                                        id="only7">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Grupos EN.png" 
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Grupos EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Grupos PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Grupos ES.png"
+                                        id="only8">
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="assets/img/EN/Cards Only/Ravalion Only Objetivos EN.png" 
+                                        data-en="assets/img/EN/Cards Only/Ravalion Only Objetivos EN.png"
+                                        data-pt="assets/img/PT/Cards Only/Ravalion Only Objetivos PT.png"
+                                        data-es="assets/img/ES/Cards Only/Ravalion Only Objetivos ES.png"
+                                        id="only9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="reviews">
+    <div class="reviewContainer">
+        <div class="textoNoticias">
+            <img src="/assets/img/EN/Ravalion Reviews EN.png" 
+                                        data-en="assets/img/EN/Ravalion Reviews EN.png"
+                                        data-pt="assets/img/PT/Ravalion Reviews PT.png"
+                                        data-es="assets/img/ES/Ravalion Reviews ES.png"
+                                        id="textoReview">
+        </div>
+        <div class="noticias">
+            <img src="assets/img/Noticia 2.png" class="noticia2">
+            <img src="assets/img/Noticia 1.png" class="noticia1">
+        </div>
+    </div>
+</div>
+
+
+<section id="faqs">
+    <div class="faqImage">
+      <img src="/assets/img/FAQ.png" alt="FAQ Image">
+    </div>
+    <!-- Question 1 -->
+    <div class="faq" id="faq1">
+      <div class="question">
+        <h3 id="question1"
+            data-en="English Question Number 1" 
+            data-pt="Pergunta número 1 em Português"
+            data-es="Pregunta número 1 en Español">
+        </h3>
+        <svg class="faqBurger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="burger-icon">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <!-- Dropdown Menu for Question 1 -->
+        <div class="dropdown-menu" id="dropdown1">
+        <!-- Question 1 -->
+        <a href="#" data-question="1" data-en data-new-question="English Question Number 1"  data-en data-new-answer="The garden awakens with spring's gentle touch.">English Question Number 1</a> 
+        <a href="#" data-question="1" data-pt data-new-question="Pergunta Número 1 em Português" data-pt data-new-answer="O jardim desperta com o toque gentil da primavera.">Pergunta Número 1 em Português</a>
+        <a href="#" data-question="1" data-es data-new-question="Pregunta Número 1 en Español"  data-es data-new-answer="El jardín despierta con el suave toque de la primavera.">Pregunta Número 1 en Español</a>
+         
+        <!-- Question 2 -->
+        <a href="#" data-question="1" 
+            data-en data-new-question="English Question Number 2" 
+            data-en data-new-answer="Sitting by the tranquil lake, I ponder life's mysteries.">
+            English Question Number 2
+        </a>
+        <a href="#" data-question="1" 
+            data-pt data-new-question="Pergunta Número 2 em Português"
+            data-pt data-new-answer="Sentado ao lado do lago tranquilo, reflito sobre os mistérios da vida.">
+            Pergunta Número 2 em Português
+        </a>
+        <a href="#" data-question="1"
+            data-es data-new-question="Pregunta Número 2 en Español" 
+            data-es data-new-answer="Sentado junto al lago tranquilo, reflexiono sobre los misterios de la vida.">
+            Pregunta Número 2 en Español
+        </a>
+
+        <!-- Question 3 -->
+        <a href="#" data-question="1" 
+            data-en data-new-question="English Question Number 3" 
+            data-en data-new-answer="Books are portals to other worlds. With each page, I'm transported to distant lands, meeting characters who feel like old friends. Reading is not just a hobby; it's a journey of the imagination.">
+            English Question Number 3
+        </a>
+        <a href="#" data-question="1"  
+            data-pt data-new-question="Pergunta Número 3 em Português"
+            data-pt data-new-answer="Os livros são portais para outros mundos. Com cada página, sou transportado para terras distantes, encontrando personagens que parecem velhos amigos. Ler não é apenas um hobby; é uma viagem da imaginação.">
+            Pergunta Número 3 em Português
+        </a>
+        <a href="#" data-question="1"
+            data-es data-new-question="Pregunta Número 3 en Español" 
+            data-es data-new-answer="Los libros son portales a otros mundos. Con cada página, soy transportado a tierras lejanas, conociendo personajes que se sienten como viejos amigos. Leer no es solo un pasatiempo; es un viaje de la imaginación.">
+            Pregunta Número 3 en Español
+        </a>
+
+        <!-- Question 4 -->
+        <a href="#" data-question="1" 
+            data-en data-new-question="English Question Number 4" 
+            data-en data-new-answer="We live in an era of technological marvels. Smartphones connect us instantly across the globe. Self-driving cars promise a future of leisurely commutes. Technology continues to reshape our daily lives.">
+            English Question Number 4
+        </a>
+        
+        <a href="#" data-question="1" 
+            data-pt data-new-question="Pergunta Número 4 em Português"
+            data-pt data-new-answer="Vivemos em uma era de maravilhas tecnológicas. Smartphones nos conectam instantaneamente em todo o mundo. Carros autônomos prometem um futuro de deslocamentos mais tranquilos. A tecnologia continua a remodelar nossas vidas diárias.">
+            Pergunta Número 4 em Português
+        </a>
+   
+        <a href="#" data-question="1"
+            data-es data-new-question="Pregunta Número 4 en Español" 
+            data-es data-new-answer="Vivimos en una era de maravillas tecnológicas. Los teléfonos inteligentes nos conectan instantáneamente a través del globo. Los coches autónomos prometen un futuro de viajes más relajados. La tecnología sigue redefiniendo nuestras vidas cotidianas.">
+            Pregunta Número 4 en Español
+        </a>
+
+        <!-- Question 5 -->
+        <a href="#" data-question="1" 
+            data-en data-new-question="English Question Number 5" 
+            data-en data-new-answer="Cooking is a culinary adventure. Spices blend, flavors meld, and aromas fill the air. Each dish tells a story, a delicious narrative crafted with care and savored with each bite.">
+            English Question Number 5
+        </a>
+
+        <a href="#" data-question="1"
+            data-pt data-new-question="Pergunta Número 5 em Português"
+            data-pt data-new-answer="Cozinhar é uma aventura culinária. Especiarias se misturam, sabores se fundem e aromas preenchem o ar. Cada prato conta uma história, uma narrativa deliciosa criada com cuidado e saboreada a cada mordida.">
+            Pergunta Número 5 em Português
+        </a>
+
+        <a href="#" data-question="1"
+            data-es data-new-question="Pregunta Número 5 en Español" 
+            data-es data-new-answer="Cocinar es una aventura culinaria. Las especias se mezclan, los sabores se combinan y los aromas llenan el aire. Cada plato cuenta una historia, una narrativa deliciosa elaborada con cuidado y saboreada en cada bocado.">
+            Pregunta Número 5 en Español
+        </a>
+
+        </div>
+      </div>
+      <!-- Answer 1 -->
+      <div class="answer">
+        <p data-en="The garden awakens with spring's gentle touch. Blossoms unfurl, painting the landscape in vibrant hues."
+           data-es="El jardín despierta con el suave toque de la primavera. Las flores se despliegan, pintando el paisaje con tonos vibrantes."
+           data-pt="O jardim desperta com o toque gentil da primavera. As flores se abrem, pintando a paisagem com cores vibrantes.">
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="availableOn">
+    <div class="availableImg">
+        <img src="/assets/img/EN/Available EN.png" class="available"
+                                        data-en="assets/img/EN/Available EN.png"
+                                        data-pt="assets/img/PT/Available PT.png"
+                                        data-es="assets/img/ES/Available ES.png"
+                                        id="available">
+        <img src="/assets/img/EN/only EN.png" class="only"
+                                        data-en="assets/img/EN/only EN.png"
+                                        data-pt="assets/img/PT/only PT.png"
+                                        data-es="assets/img/ES/only ES.png"
+                                        id="onlyOn">>
+    </div>
+    <div class="socialmedia">
+        <a href="https://twitter.com/ravalion_com">
+        <img src="/assets/img/x logo.png"  alt="">
+    </a>
+    </div>
+  </div>
+
+<!-- Chat Icon Container -->
+<div id="chatIconContainer">
+    <!-- Chat Icon (Consider using an icon library like Font Awesome) -->
+    <div id="chatIcon">
+        <img class="chatImg" src="/assets/img/chat.png" width="25" height="25" alt="Chat" /> <!-- Placeholder for your chat icon image or SVG -->
+    </div>
+</div>
+
+<!-- Chatbox Container, initially hidden -->
+<div id="chatboxContainer">
+    <div id="chatHeader">
+        <h2 id="chatHeader"
+        data-en="Chat With Us"
+        data-pt="Fala connosco"
+        data-es="Habla con nosotros"></h2>
+        <button id="closeChat">&times;</button>
+    </div>
+    <div id="chatMessages"></div>
+    <div id="chatInputContainer">
+        <input type="text" id="chatInput" placeholder="Type your message here..." />
+        <button id="sendMsg"
+        data-en="Send"
+        data-pt="Enviar"
+        data-es=""></button>
+    </div>
+</div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
